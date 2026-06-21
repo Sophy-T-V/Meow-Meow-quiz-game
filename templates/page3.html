@@ -1,0 +1,187 @@
+<html>
+<head>
+    <title>MEOW MEOW</title>
+
+    <style>
+
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+            background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+            font-family:'Comic Sans MS',cursive;
+        }
+
+        h1{
+            font-size:70px;
+            color:#ff1493;
+
+            animation:bounce 1s infinite alternate;
+
+            text-shadow:
+            0 0 10px white,
+            0 0 20px hotpink;
+        }
+
+        #h3i,#h3j,h3{
+
+            color:#5a2a5a;
+
+            font-size:28px;
+
+            margin:8px;
+
+            animation:fade 2s infinite alternate;
+        }
+
+        div{
+            width:550px;
+            height:50px;
+
+            background:white;
+
+            border-radius:25px;
+
+            margin:20px;
+
+            box-shadow:
+            0 0 15px pink,
+            0 0 30px white;
+            display:flex;
+    justify-content:center;   /* Horizontal center */
+    align-items:center;       /* Vertical center */
+
+    font-size:22px;
+    text-align:center;
+        }
+
+        #ans{
+
+            width:250px;
+
+            height:45px;
+
+            border:none;
+
+            border-radius:25px;
+
+            padding-left:20px;
+
+            font-size:18px;
+
+            outline:none;
+
+            box-shadow:
+            0 0 15px pink;
+        }
+
+        p{
+
+            color:#6a0572;
+
+            font-size:20px;
+        }
+
+        #btn{
+
+            margin-top:20px;
+
+            padding:15px 40px;
+
+            border:none;
+
+            border-radius:40px;
+
+            font-size:22px;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+            background:#ff1493;
+
+            color:white;
+
+            box-shadow:
+            0 0 15px white,
+            0 0 30px hotpink;
+
+            transition:0.3s;
+
+        }
+
+        #btn:hover{
+
+            transform:scale(1.1);
+
+            box-shadow:
+            0 0 25px white,
+            0 0 50px hotpink;
+
+        }
+
+
+        @keyframes bounce{
+
+            from{
+                transform:translateY(-10px);
+            }
+
+            to{
+                transform:translateY(10px);
+            }
+        }
+
+
+        @keyframes fade{
+
+            from{
+                opacity:0.5;
+            }
+
+            to{
+                opacity:1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Woo.. 🎉</h1>
+
+    <h3 id="h3i">
+        The cat choose the number {{number}}
+    </h3>
+
+    <h3 id="h3j">
+       Number {{number}} is {{category}}
+    </h3>
+    <h3>
+        Here is the question for you 🐱
+    </h3>
+
+    <div>
+        {{question}}
+    </div>
+    <form action="/last.html" method="POST">
+
+<input type="text" name="ans" id="ans">
+
+<p>Answer please 🐱</p>
+
+<button id="btn">
+    Submit
+</button>
+
+</form>
+
+</body>
+</html>
